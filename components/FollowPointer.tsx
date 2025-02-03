@@ -1,5 +1,5 @@
 import stringToColor from "@/lib/stringToColor";
-import { motion, AnimatePresence, useMotionValue } from "framer-motion";
+import { motion } from "framer-motion";
 
 function FollowPointer({
   x,
@@ -40,13 +40,13 @@ function FollowPointer({
         stroke={color}
         fill={color}
         strokeWidth="1"
-        viewBox="0 0 16 16"
         className={`h-6 w-6 text-[${color}] transform -rotate-[70deg] -translate-x-[12px] -translate-y-[10pk] stroke-[${color}]`}
         height="1em"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
       >
-        <path d="M14.082 2.182a.5.5 0 0 1.103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5. 57 10.694.803 8.652a.5.5 0 0 1-.006-.916112.728-5.657a.5.5 0 0 1.556.103z"></path>
+        <path d="M4.5.79v22.42l6.56-6.57h9.29L4.5.79z"></path>
       </svg>
 
       <motion.div

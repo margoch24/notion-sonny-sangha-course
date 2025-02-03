@@ -1,18 +1,19 @@
+import RoomProvider from "@/components/RoomProvider";
 import { auth } from "@clerk/nextjs/server";
-import { use } from "react";
 
-function DockLayout({
+async function DockLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
   params: Promise<{ id: string }>;
 }) {
-  // const { sessionClaims, userId, redirectToSignIn } = await auth();
-  //   if (!userId) return redirectToSignIn();
-  const { id } = use(params);
+  const { userId, redirectToSignIn } = await auth();
+  if (!userId) return redirectToSignIn();
 
-  return <div>{children}</div>;
+  const { id } = await params;
+
+  return <RoomProvider roomId={id}>{children}</RoomProvider>;
 }
 
 export default DockLayout;
