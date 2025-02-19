@@ -29,7 +29,7 @@ function Header() {
 
       <div>
         <SignedOut>
-          '
+          {"'"}
           <SignInButton />
         </SignedOut>
 

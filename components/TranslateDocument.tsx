@@ -19,7 +19,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { BotIcon, Languages, LanguagesIcon } from "lucide-react";
+import { BotIcon, LanguagesIcon } from "lucide-react";
 import { toast } from "sonner";
 import Markdown from "react-markdown";
 
@@ -52,7 +52,7 @@ function TranslateDocument({ doc }: { doc: Y.Doc }) {
   const [isOpen, setIsOpen] = useState(false);
   const [language, setLanguage] = useState<string>("");
   const [summary, setSummary] = useState("");
-  const [question, setQuestion] = useState("");
+  const [question] = useState("");
 
   const [isPending, startTransition] = useTransition();
 
